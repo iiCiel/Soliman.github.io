@@ -452,10 +452,10 @@
       <a href="#hero" class="font-mono text-[#06b6d4] font-semibold text-lg">SA<span class="text-[#94a3b8]">_</span></a>
       <div class="hidden md:flex items-center gap-8">
         <a href="#about" class="nav-link">About</a>
+        <a href="#best-skill" class="nav-link">Best Skill</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#best-skill" class="nav-link">Best Skill</a>
         <a href="#certifications" class="nav-link">Certs</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
@@ -466,10 +466,10 @@
     <div id="mobile-menu" class="hidden md:hidden border-t border-[#1e293b] bg-[#0a0f1a]">
       <div class="px-6 py-4 flex flex-col gap-4">
         <a href="#about" class="nav-link">About</a>
+        <a href="#best-skill" class="nav-link">Best Skill</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#skills" class="nav-link">Skills</a>
-        <a href="#best-skill" class="nav-link">Best Skill</a>
         <a href="#certifications" class="nav-link">Certs</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
@@ -561,6 +561,100 @@
             <div class="card"><div class="flex items-center gap-3"><div class="w-12 h-12 rounded-xl bg-[#06b6d4]/10 flex items-center justify-center"><svg class="w-6 h-6 text-[#06b6d4]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><div><p class="text-lg font-bold text-[#f1f5f9] counter" data-target="45" data-suffix="+">0</p><p class="text-sm text-[#94a3b8]">Support Tickets Resolved</p></div></div></div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Best Skill — Pokemon Theme -->
+    <section id="best-skill" class="relative z-10 overflow-hidden" style="min-height:100vh;display:flex;align-items:center;padding:6rem 0;">
+      <!-- Floating pokeballs background -->
+      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <svg class="pokeball-float absolute poke-bg-ball" style="top:8%;left:5%;width:80px;height:80px;opacity:0.08;animation:pokeFloat 8s ease-in-out infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
+        <svg class="pokeball-float absolute poke-bg-ball" style="top:55%;right:6%;width:100px;height:100px;opacity:0.06;animation:pokeFloat 10s ease-in-out 2s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
+        <svg class="pokeball-float absolute poke-bg-ball" style="top:25%;right:15%;width:50px;height:50px;opacity:0.07;animation:pokeFloat 7s ease-in-out 4s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
+        <svg class="pokeball-float absolute poke-bg-ball" style="bottom:10%;left:12%;width:70px;height:70px;opacity:0.07;animation:pokeFloat 9s ease-in-out 1s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
+        <svg class="pokeball-float absolute poke-bg-ball" style="top:75%;left:50%;width:60px;height:60px;opacity:0.05;animation:pokeFloat 11s ease-in-out 3s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
+      </div>
+
+      <!-- Pokeball throw-in element -->
+      <div id="pokeball-throw" class="pokeball-hero" aria-hidden="true">
+        <svg width="120" height="120" viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="48" fill="#ef4444" stroke="#1a1a2e" stroke-width="3"/>
+          <rect x="0" y="48" width="100" height="52" rx="0" fill="#f1f5f9"/>
+          <circle cx="50" cy="50" r="48" fill="none" stroke="#1a1a2e" stroke-width="3"/>
+          <line x1="2" y1="50" x2="36" y2="50" stroke="#1a1a2e" stroke-width="3"/>
+          <line x1="64" y1="50" x2="98" y2="50" stroke="#1a1a2e" stroke-width="3"/>
+          <circle cx="50" cy="50" r="16" fill="#f1f5f9" stroke="#1a1a2e" stroke-width="3"/>
+          <circle cx="50" cy="50" r="8" fill="#f1f5f9" stroke="#1a1a2e" stroke-width="2"/>
+        </svg>
+        <div class="star-burst" id="star-burst"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
+        <!-- Top area: big pokeball + title -->
+        <div class="text-center mb-16" style="padding-top:2rem;">
+          <p class="poke-subtitle text-[#06b6d4] font-mono text-base md:text-lg uppercase tracking-[0.3em] mb-6 reveal" style="transition:color 0.8s ease;">My #1 Skill</p>
+          <h2 class="poke-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] reveal" style="background:linear-gradient(135deg,#f1f5f9 0%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all 0.8s ease;">Willingness<br>to Learn</h2>
+          <p class="poke-tagline text-xl sm:text-2xl md:text-3xl text-[#94a3b8] max-w-3xl mx-auto mb-4 reveal" style="transition:color 0.8s ease;">I collect skills like I collect Pok&eacute;mon &mdash;</p>
+          <p class="poke-tagline-bold text-2xl sm:text-3xl md:text-4xl font-bold text-[#f1f5f9] reveal" style="transition:color 0.8s ease;">gotta catch &rsquo;em all.</p>
+        </div>
+        <!-- Skill "Pokedex" cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto mb-12">
+          <div class="pokedex-card reveal">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">#001</span>
+              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Networking</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(96,165,250,0.15);color:#60a5fa;">Water</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:85%"></div></div>
+            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Cisco, VLANs, OSPF, TCP/IP</p>
+          </div>
+          <div class="pokedex-card reveal">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">#002</span>
+              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Security</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(239,68,68,0.15);color:#ef4444;">Fire</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:75%;background:linear-gradient(90deg,#ef4444,#f97316)"></div></div>
+            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Wireshark, Nmap, Burp Suite</p>
+          </div>
+          <div class="pokedex-card reveal">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">#003</span>
+              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Python</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(74,222,128,0.15);color:#4ade80;">Grass</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:80%;background:linear-gradient(90deg,#4ade80,#22d3ee)"></div></div>
+            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Automation, scripting, tools</p>
+          </div>
+          <div class="pokedex-card reveal">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">#004</span>
+              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Cloud</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(168,85,247,0.15);color:#a855f7;">Psychic</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:65%;background:linear-gradient(90deg,#a855f7,#ec4899)"></div></div>
+            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">AWS, IAM, EC2, S3, Docker</p>
+          </div>
+          <div class="pokedex-card reveal">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">#005</span>
+              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Linux</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(251,191,36,0.15);color:#fbbf24;">Electric</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:80%;background:linear-gradient(90deg,#fbbf24,#f59e0b)"></div></div>
+            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Bash, sysadmin, hardening</p>
+          </div>
+          <div class="pokedex-card reveal" style="border-style:dashed;border-color:rgba(6,182,212,0.3);">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="pokedex-number">???</span>
+              <span class="poke-skill-name text-[#94a3b8] font-bold" style="transition:color 0.4s ease;">Next Catch</span>
+              <span class="ml-auto pokedex-type" style="background:rgba(6,182,212,0.15);color:#06b6d4;">???</span>
+            </div>
+            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:0%;animation:barGrow 2s ease forwards 1s"></div></div>
+            <p class="poke-skill-desc text-xs text-[#06b6d4] mt-1">Always hunting for new skills...</p>
+          </div>
+        </div>
+        <p class="poke-footer text-center text-[#94a3b8] reveal font-mono text-sm" style="transition:color 0.8s ease;"><span class="text-[#06b6d4]" style="transition:color 0.8s ease;">5</span> caught &middot; <span class="text-[#06b6d4]" style="transition:color 0.8s ease;">&infin;</span> to go &middot; <span class="text-[#f1f5f9]" style="transition:color 0.8s ease;">journey never stops</span></p>
       </div>
     </section>
 
@@ -685,102 +779,8 @@
       </div>
     </section>
 
-    <!-- Best Skill — Pokemon Theme -->
-    <section id="best-skill" class="relative z-10 overflow-hidden" style="min-height:100vh;display:flex;align-items:center;padding:6rem 0;">
-      <!-- Floating pokeballs background -->
-      <div class="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-        <svg class="pokeball-float absolute poke-bg-ball" style="top:8%;left:5%;width:80px;height:80px;opacity:0.08;animation:pokeFloat 8s ease-in-out infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
-        <svg class="pokeball-float absolute poke-bg-ball" style="top:55%;right:6%;width:100px;height:100px;opacity:0.06;animation:pokeFloat 10s ease-in-out 2s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
-        <svg class="pokeball-float absolute poke-bg-ball" style="top:25%;right:15%;width:50px;height:50px;opacity:0.07;animation:pokeFloat 7s ease-in-out 4s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
-        <svg class="pokeball-float absolute poke-bg-ball" style="bottom:10%;left:12%;width:70px;height:70px;opacity:0.07;animation:pokeFloat 9s ease-in-out 1s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
-        <svg class="pokeball-float absolute poke-bg-ball" style="top:75%;left:50%;width:60px;height:60px;opacity:0.05;animation:pokeFloat 11s ease-in-out 3s infinite" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" stroke-width="4"/><line x1="2" y1="50" x2="38" y2="50" stroke-width="4"/><line x1="62" y1="50" x2="98" y2="50" stroke-width="4"/><circle cx="50" cy="50" r="14" stroke-width="4"/><circle class="poke-bg-ball-fill" cx="50" cy="50" r="6"/></svg>
-      </div>
-
-      <!-- Pokeball throw-in element -->
-      <div id="pokeball-throw" class="pokeball-hero" aria-hidden="true">
-        <svg width="120" height="120" viewBox="0 0 100 100">
-          <circle cx="50" cy="50" r="48" fill="#ef4444" stroke="#1a1a2e" stroke-width="3"/>
-          <rect x="0" y="48" width="100" height="52" rx="0" fill="#f1f5f9"/>
-          <circle cx="50" cy="50" r="48" fill="none" stroke="#1a1a2e" stroke-width="3"/>
-          <line x1="2" y1="50" x2="36" y2="50" stroke="#1a1a2e" stroke-width="3"/>
-          <line x1="64" y1="50" x2="98" y2="50" stroke="#1a1a2e" stroke-width="3"/>
-          <circle cx="50" cy="50" r="16" fill="#f1f5f9" stroke="#1a1a2e" stroke-width="3"/>
-          <circle cx="50" cy="50" r="8" fill="#f1f5f9" stroke="#1a1a2e" stroke-width="2"/>
-        </svg>
-        <div class="star-burst" id="star-burst"></div>
-      </div>
-
-      <div class="max-w-6xl mx-auto px-6 relative z-10 w-full">
-        <!-- Top area: big pokeball + title -->
-        <div class="text-center mb-16" style="padding-top:2rem;">
-          <p class="poke-subtitle text-[#06b6d4] font-mono text-base md:text-lg uppercase tracking-[0.3em] mb-6 reveal" style="transition:color 0.8s ease;">My #1 Skill</p>
-          <h2 class="poke-title text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-8 leading-[0.95] reveal" style="background:linear-gradient(135deg,#f1f5f9 0%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:all 0.8s ease;">Willingness<br>to Learn</h2>
-          <p class="poke-tagline text-xl sm:text-2xl md:text-3xl text-[#94a3b8] max-w-3xl mx-auto mb-4 reveal" style="transition:color 0.8s ease;">I collect skills like I collect Pok&eacute;mon &mdash;</p>
-          <p class="poke-tagline-bold text-2xl sm:text-3xl md:text-4xl font-bold text-[#f1f5f9] reveal" style="transition:color 0.8s ease;">gotta catch &rsquo;em all.</p>
-        </div>
-        <!-- Skill "Pokedex" cards -->
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto mb-12">
-          <div class="pokedex-card reveal">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">#001</span>
-              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Networking</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(96,165,250,0.15);color:#60a5fa;">Water</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:85%"></div></div>
-            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Cisco, VLANs, OSPF, TCP/IP</p>
-          </div>
-          <div class="pokedex-card reveal">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">#002</span>
-              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Security</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(239,68,68,0.15);color:#ef4444;">Fire</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:75%;background:linear-gradient(90deg,#ef4444,#f97316)"></div></div>
-            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Wireshark, Nmap, Burp Suite</p>
-          </div>
-          <div class="pokedex-card reveal">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">#003</span>
-              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Python</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(74,222,128,0.15);color:#4ade80;">Grass</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:80%;background:linear-gradient(90deg,#4ade80,#22d3ee)"></div></div>
-            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Automation, scripting, tools</p>
-          </div>
-          <div class="pokedex-card reveal">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">#004</span>
-              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Cloud</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(168,85,247,0.15);color:#a855f7;">Psychic</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:65%;background:linear-gradient(90deg,#a855f7,#ec4899)"></div></div>
-            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">AWS, IAM, EC2, S3, Docker</p>
-          </div>
-          <div class="pokedex-card reveal">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">#005</span>
-              <span class="poke-skill-name text-[#f1f5f9] font-bold" style="transition:color 0.4s ease;">Linux</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(251,191,36,0.15);color:#fbbf24;">Electric</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:80%;background:linear-gradient(90deg,#fbbf24,#f59e0b)"></div></div>
-            <p class="poke-skill-desc text-xs text-[#94a3b8] mt-1" style="transition:color 0.4s ease;">Bash, sysadmin, hardening</p>
-          </div>
-          <div class="pokedex-card reveal" style="border-style:dashed;border-color:rgba(6,182,212,0.3);">
-            <div class="flex items-center gap-3 mb-2">
-              <span class="pokedex-number">???</span>
-              <span class="poke-skill-name text-[#94a3b8] font-bold" style="transition:color 0.4s ease;">Next Catch</span>
-              <span class="ml-auto pokedex-type" style="background:rgba(6,182,212,0.15);color:#06b6d4;">???</span>
-            </div>
-            <div class="pokedex-bar"><div class="pokedex-bar-fill" style="width:0%;animation:barGrow 2s ease forwards 1s"></div></div>
-            <p class="poke-skill-desc text-xs text-[#06b6d4] mt-1">Always hunting for new skills...</p>
-          </div>
-        </div>
-        <p class="poke-footer text-center text-[#94a3b8] reveal font-mono text-sm" style="transition:color 0.8s ease;"><span class="text-[#06b6d4]" style="transition:color 0.8s ease;">5</span> caught &middot; <span class="text-[#06b6d4]" style="transition:color 0.8s ease;">&infin;</span> to go &middot; <span class="text-[#f1f5f9]" style="transition:color 0.8s ease;">journey never stops</span></p>
-      </div>
-    </section>
-
     <!-- Certifications -->
-    <section id="certifications" class="py-24 bg-[#0a0f1a] relative z-10">
+    <section id="certifications" class="py-24 bg-[#111827] relative z-10">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-title reveal">Certifications &amp; Training</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Industry certifications and hands-on training platforms.</p>
@@ -795,7 +795,7 @@
     </section>
 
     <!-- Leadership -->
-    <section id="leadership" class="py-24 bg-[#111827] relative z-10">
+    <section id="leadership" class="py-24 bg-[#0a0f1a] relative z-10">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-title reveal">Leadership</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Building communities and competing in security challenges.</p>
@@ -819,7 +819,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-[#0a0f1a] relative z-10">
+    <section id="contact" class="py-24 bg-[#111827] relative z-10">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-title justify-center reveal">Get In Touch</h2>
         <div class="max-w-2xl mx-auto">
@@ -932,45 +932,62 @@
     }, { threshold: 0.5 });
     document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
 
-    // Pokemon section — pokeball throw + color change
+    // Pokemon section — pokeball throw + color change (replays every scroll-in)
     const bestSkill = document.getElementById('best-skill');
     const pokeballThrow = document.getElementById('pokeball-throw');
-    const starBurst = document.getElementById('star-burst');
-    let pokeAnimPlayed = false;
+    const starBurstEl = document.getElementById('star-burst');
+    let pokeAnimRunning = false;
+    let pokeTimeouts = [];
+    function resetPokeAnim() {
+      pokeTimeouts.forEach(t => clearTimeout(t));
+      pokeTimeouts = [];
+      pokeAnimRunning = false;
+      pokeballThrow.className = 'pokeball-hero';
+      pokeballThrow.style.cssText = '';
+      starBurstEl.className = 'star-burst';
+      bestSkill.classList.remove('poke-active');
+      const title = bestSkill.querySelector('.poke-title');
+      if (title) {
+        title.style.background = 'linear-gradient(135deg, #f1f5f9 0%, #06b6d4 100%)';
+        title.style.webkitBackgroundClip = 'text';
+        title.style.backgroundClip = 'text';
+      }
+    }
+    function runPokeAnim() {
+      if (pokeAnimRunning) return;
+      pokeAnimRunning = true;
+      pokeballThrow.classList.add('thrown');
+      pokeTimeouts.push(setTimeout(() => {
+        pokeballThrow.classList.remove('thrown');
+        pokeballThrow.style.transform = 'translate(-50%, -50%) rotate(720deg) scale(1)';
+        pokeballThrow.style.opacity = '1';
+        pokeballThrow.classList.add('shake');
+      }, 1000));
+      pokeTimeouts.push(setTimeout(() => {
+        pokeballThrow.classList.remove('shake');
+        pokeballThrow.classList.add('caught');
+        starBurstEl.classList.add('active');
+        bestSkill.classList.add('poke-active');
+        const title = bestSkill.querySelector('.poke-title');
+        if (title) {
+          title.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #dc2626 100%)';
+          title.style.webkitBackgroundClip = 'text';
+          title.style.backgroundClip = 'text';
+        }
+      }, 1500));
+      pokeTimeouts.push(setTimeout(() => {
+        pokeballThrow.style.transition = 'opacity 0.6s ease';
+        pokeballThrow.style.opacity = '0';
+      }, 2200));
+    }
     if (bestSkill && pokeballThrow) {
       const pokeObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-          if (entry.isIntersecting && !pokeAnimPlayed) {
-            pokeAnimPlayed = true;
-            // Throw the pokeball in
-            pokeballThrow.classList.add('thrown');
-            // After throw lands, shake
-            setTimeout(() => {
-              pokeballThrow.classList.remove('thrown');
-              pokeballThrow.style.transform = 'translate(-50%, -50%) rotate(720deg) scale(1)';
-              pokeballThrow.style.opacity = '1';
-              pokeballThrow.classList.add('shake');
-            }, 1000);
-            // After shake, catch flash + color change
-            setTimeout(() => {
-              pokeballThrow.classList.remove('shake');
-              pokeballThrow.classList.add('caught');
-              starBurst.classList.add('active');
-              bestSkill.classList.add('poke-active');
-              // Update title gradient for light theme
-              const title = bestSkill.querySelector('.poke-title');
-              if (title) {
-                title.style.background = 'linear-gradient(135deg, #1a1a2e 0%, #dc2626 100%)';
-                title.style.webkitBackgroundClip = 'text';
-                title.style.backgroundClip = 'text';
-              }
-            }, 1500);
-            // Fade out pokeball after catch
-            setTimeout(() => {
-              pokeballThrow.style.transition = 'opacity 0.6s ease';
-              pokeballThrow.style.opacity = '0';
-            }, 2200);
-            pokeObserver.unobserve(entry.target);
+          if (entry.isIntersecting) {
+            resetPokeAnim();
+            requestAnimationFrame(() => runPokeAnim());
+          } else {
+            resetPokeAnim();
           }
         });
       }, { threshold: 0.2 });
