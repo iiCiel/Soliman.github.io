@@ -440,6 +440,130 @@
       border-radius: 3px;
       transition: width 1s ease;
     }
+
+    /* ===== HALO HUD — Hero ===== */
+    .hud-bracket { position: absolute; width: 40px; height: 40px; border-color: rgba(6,182,212,0.3); z-index: 5; transition: border-color 0.3s; }
+    .hud-bracket.tl { top: 5rem; left: 2rem; border-top: 2px solid; border-left: 2px solid; }
+    .hud-bracket.tr { top: 5rem; right: 2rem; border-top: 2px solid; border-right: 2px solid; }
+    .hud-bracket.bl { bottom: 2rem; left: 2rem; border-bottom: 2px solid; border-left: 2px solid; }
+    .hud-bracket.br { bottom: 2rem; right: 2rem; border-bottom: 2px solid; border-right: 2px solid; }
+    .hud-text { position: absolute; font-family: 'JetBrains Mono', monospace; font-size: 0.625rem; color: rgba(6,182,212,0.2); text-transform: uppercase; letter-spacing: 0.15em; z-index: 5; }
+    @keyframes visorScan { 0% { top: 5rem; opacity: 0.5; } 100% { top: 100%; opacity: 0; } }
+    .visor-scan { position: absolute; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, transparent, #06b6d4, transparent); z-index: 5; animation: visorScan 2.5s ease-out 1.5s forwards; opacity: 0; pointer-events: none; }
+    .shield-bar { height: 3px; background: linear-gradient(90deg, #00ff88, #06b6d4); border-radius: 2px; animation: shieldPulse 3s ease infinite; }
+    @keyframes shieldPulse { 0%,100% { opacity: 0.6; } 50% { opacity: 1; } }
+
+    /* ===== MINECRAFT — About ===== */
+    .mc-grass-border { position: absolute; top: 0; left: 0; right: 0; height: 32px; z-index: 2; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #about.mc-active .mc-grass-border { opacity: 0.2; }
+    #about.mc-active { background: linear-gradient(180deg, #2d4a1e 0%, #111827 8%, #111827 100%); }
+    .mc-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #about.mc-active .mc-element { opacity: 1; }
+    @keyframes steveRun { 0% { left: -60px; } 100% { left: calc(100% + 60px); } }
+    @keyframes steveStep { 0%,100% { transform: scaleX(1); } 50% { transform: scaleX(-1); } }
+    .mc-steve { animation: steveRun 22s linear infinite; bottom: 10%; opacity: 0.12 !important; }
+    #about.mc-active .mc-steve { opacity: 0.12 !important; }
+    .mc-tree, .mc-house { bottom: 0; opacity: 0.1 !important; }
+    .mc-block-float { animation: pokeFloat 6s ease-in-out infinite; }
+
+    /* ===== PAC-MAN — Projects ===== */
+    @keyframes pacMove { 0% { left: -50px; } 100% { left: calc(100% + 50px); } }
+    @keyframes pacChomp { 0%,100% { d: path('M20 2A18 18 0 1 1 20 38A18 18 0 1 1 20 2'); } 50% { d: path('M20 2A18 18 0 1 1 20 38L20 20Z'); } }
+    #projects.pac-active { background: #000 !important; transition: background 0.8s ease; }
+    .pac-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #projects.pac-active .pac-element { opacity: 1; }
+    .pac-dots { position: absolute; bottom: 15%; left: 0; right: 0; height: 8px; background: radial-gradient(circle 3px at center, #FFB8AE 2px, transparent 3px); background-size: 40px 8px; opacity: 0.15; pointer-events: none; }
+    .pac-ghost { animation: pokeFloat 3s ease-in-out infinite; }
+    #projects.pac-active .card { border-left: 3px solid #2121DE; }
+    #projects.pac-active .section-title::before { background: #FFFF00; }
+    .pac-score { font-family: 'JetBrains Mono', monospace; color: #FFFF00; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0; transition: opacity 0.8s ease; }
+    #projects.pac-active .pac-score { opacity: 0.6; }
+
+    /* ===== ZELDA — Experience ===== */
+    #experience.zelda-active { transition: background 0.8s ease; }
+    .zelda-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #experience.zelda-active .zelda-element { opacity: 1; }
+    #experience.zelda-active .timeline-item::before { background: none; box-shadow: none; width: 16px; height: 14px; border-radius: 0; }
+    #experience.zelda-active .timeline-item::after { background: linear-gradient(to bottom, #C8A82E, transparent); }
+    @keyframes naviFloat { 0%,100% { transform: translate(0,0); } 25% { transform: translate(15px,-10px); } 50% { transform: translate(5px,-20px); } 75% { transform: translate(-10px,-5px); } }
+    .zelda-navi { width: 8px; height: 8px; background: #00BFFF; border-radius: 50%; box-shadow: 0 0 12px #00BFFF, 0 0 24px rgba(0,191,255,0.3); animation: naviFloat 4s ease-in-out infinite; }
+    #experience.zelda-active .card { border-left: 3px solid rgba(200,168,46,0.4); }
+    #experience.zelda-active .section-title::before { background: #C8A82E; }
+
+    /* ===== TETRIS — Skills ===== */
+    #skills.tetris-active { background: #000 !important; transition: background 0.8s ease; }
+    .tetris-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #skills.tetris-active .tetris-element { opacity: 1; }
+    #skills.tetris-active::before { content: ''; position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 30px 30px; pointer-events: none; z-index: 1; }
+    @keyframes tetrisFall { 0% { transform: translateY(-60px) rotate(0deg); opacity: 0; } 10% { opacity: 0.08; } 90% { opacity: 0.08; } 100% { transform: translateY(100vh) rotate(90deg); opacity: 0; } }
+    @keyframes tetrisDrop { 0% { transform: translateY(-40px); opacity: 0; } 70% { transform: translateY(4px); opacity: 1; } 85% { transform: translateY(-2px); } 100% { transform: translateY(0); } }
+    #skills.tetris-active .card { animation: tetrisDrop 0.5s ease forwards; }
+    #skills.tetris-active .card:nth-child(1) { animation-delay: 0s; }
+    #skills.tetris-active .card:nth-child(2) { animation-delay: 0.1s; }
+    #skills.tetris-active .card:nth-child(3) { animation-delay: 0.2s; }
+    #skills.tetris-active .card:nth-child(4) { animation-delay: 0.3s; }
+    #skills.tetris-active .card:nth-child(5) { animation-delay: 0.4s; }
+    #skills.tetris-active .card:nth-child(6) { animation-delay: 0.5s; }
+    .tetris-score { font-family: 'JetBrains Mono', monospace; color: #fff; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0; transition: opacity 0.8s ease; }
+    #skills.tetris-active .tetris-score { opacity: 0.4; }
+    #skills.tetris-active .section-title::before { background: #A000F0; }
+
+    /* ===== MARIO — Certifications ===== */
+    #certifications.mario-active { background: linear-gradient(180deg, #5C94FC 0%, #5C94FC 60%, #C48020 60%, #8C5400 100%) !important; transition: background 0.8s ease; }
+    .mario-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #certifications.mario-active .mario-element { opacity: 1; }
+    #certifications.mario-active .cert-icon { background: linear-gradient(180deg, #FAA005 0%, #C88000 100%) !important; border: 2px solid #8C5400; border-radius: 4px; box-shadow: inset 0 -2px 0 #8C5400; }
+    #certifications.mario-active .cert-badge { background: rgba(0,0,0,0.6); border-color: rgba(255,255,255,0.2); }
+    #certifications.mario-active .section-title { color: #fff; }
+    #certifications.mario-active .section-title::before { background: #E52521; }
+    @keyframes coinBounce { 0%,100% { transform: translateY(0) scaleX(1); } 25% { transform: translateY(-15px) scaleX(0.6); } 50% { transform: translateY(-20px) scaleX(1); } 75% { transform: translateY(-15px) scaleX(0.6); } }
+    @keyframes cloudDrift { 0% { transform: translateX(-100px); } 100% { transform: translateX(calc(100vw + 100px)); } }
+    .mario-coin { animation: coinBounce 2s ease infinite; }
+    .mario-cloud { animation: cloudDrift 35s linear infinite; }
+
+    /* ===== DARK SOULS — Leadership ===== */
+    #leadership.ds-active { background: #0D0D0D !important; transition: background 0.8s ease; }
+    .ds-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #leadership.ds-active .ds-element { opacity: 1; }
+    @keyframes bonfireFlicker { 0%,100% { transform: scaleY(1) scaleX(1); } 25% { transform: scaleY(1.1) scaleX(0.9); } 50% { transform: scaleY(0.9) scaleX(1.1); } 75% { transform: scaleY(1.05) scaleX(0.95); } }
+    @keyframes emberRise { 0% { transform: translateY(0) translateX(0); opacity: 0; } 15% { opacity: 0.8; } 100% { transform: translateY(-180px) translateX(25px); opacity: 0; } }
+    @keyframes areaCleared { 0% { opacity: 0; letter-spacing: 0.5em; } 25% { opacity: 1; letter-spacing: 0.3em; } 75% { opacity: 1; letter-spacing: 0.3em; } 100% { opacity: 0; letter-spacing: 0.4em; } }
+    .ds-bonfire-flame { animation: bonfireFlicker 2s ease-in-out infinite; transform-origin: bottom center; }
+    .ds-ember { position: absolute; width: 3px; height: 3px; background: #FF6A00; border-radius: 50%; box-shadow: 0 0 6px #FF4500; animation: emberRise 4s ease-out infinite; opacity: 0; }
+    .ds-area-cleared { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); font-size: 2.5rem; color: #DAA520; text-transform: uppercase; pointer-events: none; z-index: 20; opacity: 0; }
+    #leadership.ds-active .ds-area-cleared { animation: areaCleared 2.5s ease forwards; }
+    #leadership.ds-active .card { background: #0D0D0D; border-color: rgba(255,106,0,0.2); }
+    #leadership.ds-active .card:hover { border-color: rgba(255,106,0,0.6); box-shadow: 0 0 30px rgba(255,106,0,0.1); }
+    #leadership.ds-active .section-title::before { background: #FF6A00; }
+    .ds-fog { position: absolute; top: 0; left: 0; right: 0; height: 60px; background: linear-gradient(180deg, rgba(255,106,0,0.06) 0%, transparent 100%); animation: shieldPulse 4s ease infinite; }
+
+    /* ===== UNDERTALE — Contact ===== */
+    #contact.ut-active { background: #000 !important; transition: background 0.8s ease; }
+    .ut-element { position: absolute; pointer-events: none; opacity: 0; transition: opacity 0.8s ease; }
+    #contact.ut-active .ut-element { opacity: 1; }
+    #contact.ut-active .terminal-texture { background: #000 !important; border: 3px solid #fff !important; border-radius: 12px !important; }
+    #contact.ut-active .terminal-texture::before { display: none; }
+    #contact.ut-active .section-title { color: #fff; }
+    #contact.ut-active .section-title::before { background: #FF0000; }
+    #contact.ut-active .card { background: transparent; border: 3px solid; border-radius: 0; }
+    #contact.ut-active .card:nth-child(1) { border-color: #FFA500; color: #FFA500; }
+    #contact.ut-active .card:nth-child(2) { border-color: #FFFF00; color: #FFFF00; }
+    #contact.ut-active .card:nth-child(3) { border-color: #00BFFF; color: #00BFFF; }
+    #contact.ut-active .card:nth-child(4) { border-color: #D535D9; color: #D535D9; }
+    #contact.ut-active .card:hover { transform: translateY(0); box-shadow: none; }
+    .ut-soul { display: inline-block; animation: shieldPulse 1.5s ease infinite; }
+    .ut-determination { color: #FF0000; font-weight: 700; }
+
+    /* ===== RETRO ARCADE — Footer ===== */
+    @keyframes arcadeBlink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+    .arcade-blink { animation: arcadeBlink 1s steps(1) infinite; font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; color: #00FFFF; }
+    footer.arcade-active { background: #000 !important; border-color: #333 !important; }
+    footer.arcade-active::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0px, rgba(0,0,0,0.15) 1px, transparent 2px); pointer-events: none; }
+
+    /* Hide decorative elements on mobile */
+    @media (max-width: 768px) {
+      .hud-bracket, .hud-text, .mc-steve, .mc-tree, .mc-house, .zelda-sword-bg, .ds-area-cleared { display: none !important; }
+    }
   </style>
 </head>
 <body class="h-full bg-[#0a0f1a] text-[#f1f5f9] font-display overflow-auto">
@@ -484,6 +608,14 @@
   <main id="main">
     <!-- Hero -->
     <section id="hero" class="network-bg min-h-screen flex items-center pt-20 relative z-10">
+      <!-- Halo HUD elements -->
+      <div class="hud-bracket tl" aria-hidden="true"></div>
+      <div class="hud-bracket tr" aria-hidden="true"></div>
+      <div class="hud-bracket bl" aria-hidden="true"></div>
+      <div class="hud-bracket br" aria-hidden="true"></div>
+      <div class="visor-scan" aria-hidden="true"></div>
+      <span class="hud-text" style="top:5.5rem;left:5rem;" aria-hidden="true">MJOLNIR HUD v7.2</span>
+      <span class="hud-text" style="bottom:2.5rem;right:5rem;" aria-hidden="true">SHIELD: 100%</span>
       <div class="max-w-6xl mx-auto px-6 py-16 w-full">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -530,7 +662,19 @@
     </section>
 
     <!-- About -->
-    <section id="about" class="py-24 bg-[#111827] relative z-10">
+    <section id="about" class="py-24 bg-[#111827] relative z-10 overflow-hidden">
+      <!-- Minecraft decorative elements -->
+      <div class="mc-grass-border" aria-hidden="true" style="background: repeating-linear-gradient(90deg, #5B8731 0px, #5B8731 14px, #4a7228 14px, #4a7228 16px); background-size: 16px 16px;"></div>
+      <!-- Steve running -->
+      <svg class="mc-element mc-steve" style="width:32px;height:48px;" aria-hidden="true" viewBox="0 0 16 24"><rect x="4" y="0" width="8" height="8" fill="#6B4226"/><rect x="4" y="2" width="8" height="6" fill="#C6956E"/><rect x="5" y="3" width="2" height="2" fill="#fff"/><rect x="9" y="3" width="2" height="2" fill="#fff"/><rect x="4" y="8" width="8" height="8" fill="#3B5DC9"/><rect x="3" y="8" width="1" height="7" fill="#C6956E"/><rect x="12" y="8" width="1" height="7" fill="#C6956E"/><rect x="4" y="16" width="3" height="8" fill="#2B3FB3"/><rect x="9" y="16" width="3" height="8" fill="#2B3FB3"/></svg>
+      <!-- Trees -->
+      <svg class="mc-element mc-tree" style="left:8%;width:40px;height:64px;opacity:0.1 !important;" aria-hidden="true" viewBox="0 0 20 32"><rect x="8" y="16" width="4" height="16" fill="#6B4226"/><rect x="2" y="4" width="16" height="14" fill="#2d7a1e" rx="1"/><rect x="4" y="0" width="12" height="6" fill="#2d7a1e" rx="1"/></svg>
+      <svg class="mc-element mc-tree" style="right:12%;width:36px;height:56px;opacity:0.08 !important;" aria-hidden="true" viewBox="0 0 20 32"><rect x="8" y="16" width="4" height="16" fill="#6B4226"/><rect x="2" y="4" width="16" height="14" fill="#2d7a1e" rx="1"/><rect x="4" y="0" width="12" height="6" fill="#2d7a1e" rx="1"/></svg>
+      <!-- Village house -->
+      <svg class="mc-element mc-house" style="right:4%;width:60px;height:48px;opacity:0.09 !important;" aria-hidden="true" viewBox="0 0 30 24"><polygon points="15,0 0,10 30,10" fill="#5C4033"/><rect x="2" y="10" width="26" height="14" fill="#C4A882"/><rect x="4" y="12" width="6" height="6" fill="#87CEEB" opacity="0.5"/><rect x="12" y="16" width="6" height="8" fill="#6B4226"/></svg>
+      <!-- Floating blocks -->
+      <div class="mc-element mc-block-float" style="top:20%;right:25%;opacity:0.06 !important;"><svg width="12" height="12" viewBox="0 0 12 12"><rect width="12" height="12" fill="#8B6914" rx="1"/><rect x="2" y="2" width="3" height="3" fill="#7a5c10" rx="0.5"/><rect x="7" y="7" width="3" height="3" fill="#7a5c10" rx="0.5"/></svg></div>
+      <div class="mc-element mc-block-float" style="top:50%;left:8%;opacity:0.05 !important;animation-delay:2s;"><svg width="10" height="10" viewBox="0 0 10 10"><rect width="10" height="10" fill="#7F7F7F" rx="1"/><rect x="2" y="3" width="2" height="2" fill="#6a6a6a"/><rect x="6" y="6" width="2" height="2" fill="#6a6a6a"/></svg></div>
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="section-title reveal">About Me</h2>
         <p class="text-[#94a3b8] mb-8 max-w-xl reveal">Building security skills through hands-on projects and continuous learning.</p>
@@ -659,8 +803,16 @@
     </section>
 
     <!-- Projects -->
-    <section id="projects" class="py-24 bg-[#0a0f1a] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="projects" class="py-24 bg-[#0a0f1a] relative z-10 overflow-hidden">
+      <!-- Pac-Man decorative elements -->
+      <div class="pac-element pac-dots" aria-hidden="true"></div>
+      <!-- Pac-Man moving across -->
+      <svg class="pac-element" style="bottom:14%;opacity:0.2;animation:pacMove 14s linear infinite;position:absolute;" width="36" height="36" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2A18 18 0 1 1 20 38A18 18 0 1 1 20 2" fill="#FFFF00"/><polygon points="20,20 38,10 38,30" fill="#000"/></svg>
+      <!-- Maze border lines top/bottom -->
+      <div class="pac-element" style="top:0;left:5%;right:5%;height:3px;background:#2121DE;box-shadow:0 4px 0 #000,0 7px 0 #2121DE;opacity:0.3;position:absolute;" aria-hidden="true"></div>
+      <div class="pac-element" style="bottom:0;left:5%;right:5%;height:3px;background:#2121DE;box-shadow:0 -4px 0 #000,0 -7px 0 #2121DE;opacity:0.3;position:absolute;" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <p class="pac-score text-center mb-2 reveal" aria-hidden="true">HIGH SCORE: 4 PROJECTS &nbsp;&nbsp; 1UP</p>
         <h2 class="section-title reveal">Featured Projects</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Hands-on security projects demonstrating practical skills and real-world problem solving.</p>
         <div class="grid md:grid-cols-2 gap-6">
@@ -726,8 +878,14 @@
     </section>
 
     <!-- Experience -->
-    <section id="experience" class="py-24 bg-[#111827] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="experience" class="py-24 bg-[#111827] relative z-10 overflow-hidden">
+      <!-- Zelda decorative elements -->
+      <svg class="zelda-element" style="top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:260px;opacity:0.04 !important;position:absolute;" aria-hidden="true" viewBox="0 0 200 180"><polygon points="100,0 50,87 150,87" fill="#C8A82E"/><polygon points="50,87 0,174 100,174" fill="#C8A82E"/><polygon points="150,87 100,174 200,174" fill="#C8A82E"/></svg>
+      <!-- Navi fairy -->
+      <div class="zelda-element zelda-navi" style="top:15%;right:20%;opacity:0.6 !important;position:absolute;" aria-hidden="true"></div>
+      <!-- Master Sword along left side -->
+      <svg class="zelda-element zelda-sword-bg" style="top:20%;left:2%;width:24px;height:200px;opacity:0.08 !important;position:absolute;" aria-hidden="true" viewBox="0 0 30 200"><polygon points="15,0 10,120 20,120" fill="#A8B8C8"/><rect x="5" y="118" width="20" height="6" rx="2" fill="#C8A82E"/><rect x="10" y="124" width="10" height="35" rx="3" fill="#6B2FA0"/><circle cx="15" cy="166" r="6" fill="#C8A82E"/></svg>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
         <h2 class="section-title reveal">Experience</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Professional experience in software development and IT infrastructure.</p>
         <div class="space-y-8">
@@ -764,8 +922,13 @@
     </section>
 
     <!-- Skills -->
-    <section id="skills" class="py-24 bg-[#0a0f1a] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="skills" class="py-24 bg-[#0a0f1a] relative z-10 overflow-hidden">
+      <!-- Tetris falling pieces -->
+      <svg class="tetris-element" style="left:10%;top:0;width:30px;height:30px;position:absolute;animation:tetrisFall 10s linear infinite;opacity:0.08 !important;" aria-hidden="true" viewBox="0 0 40 10"><rect x="0" y="0" width="9" height="9" fill="#00F0F0" rx="1"/><rect x="10" y="0" width="9" height="9" fill="#00F0F0" rx="1"/><rect x="20" y="0" width="9" height="9" fill="#00F0F0" rx="1"/><rect x="30" y="0" width="9" height="9" fill="#00F0F0" rx="1"/></svg>
+      <svg class="tetris-element" style="left:55%;top:0;width:20px;height:20px;position:absolute;animation:tetrisFall 13s linear 3s infinite;opacity:0.07 !important;" aria-hidden="true" viewBox="0 0 30 20"><rect x="0" y="0" width="9" height="9" fill="#A000F0" rx="1"/><rect x="0" y="10" width="9" height="9" fill="#A000F0" rx="1"/><rect x="10" y="10" width="9" height="9" fill="#A000F0" rx="1"/><rect x="20" y="10" width="9" height="9" fill="#A000F0" rx="1"/></svg>
+      <svg class="tetris-element" style="right:15%;top:0;width:20px;height:20px;position:absolute;animation:tetrisFall 11s linear 6s infinite;opacity:0.06 !important;" aria-hidden="true" viewBox="0 0 20 20"><rect x="0" y="0" width="9" height="9" fill="#F0F000" rx="1"/><rect x="10" y="0" width="9" height="9" fill="#F0F000" rx="1"/><rect x="0" y="10" width="9" height="9" fill="#F0F000" rx="1"/><rect x="10" y="10" width="9" height="9" fill="#F0F000" rx="1"/></svg>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
+        <p class="tetris-score text-center mb-2 reveal" aria-hidden="true">LEVEL 06 &nbsp;|&nbsp; LINES: 42 &nbsp;|&nbsp; SCORE: 99999</p>
         <h2 class="section-title reveal">Skills</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Technical skills developed through coursework, projects, and professional experience.</p>
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -780,8 +943,18 @@
     </section>
 
     <!-- Certifications -->
-    <section id="certifications" class="py-24 bg-[#111827] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="certifications" class="py-24 bg-[#111827] relative z-10 overflow-hidden">
+      <!-- Mario decorative elements -->
+      <!-- Clouds -->
+      <svg class="mario-element mario-cloud" style="top:8%;opacity:0.08 !important;position:absolute;" width="64" height="28" viewBox="0 0 64 28" aria-hidden="true"><ellipse cx="20" cy="18" rx="18" ry="10" fill="white"/><ellipse cx="40" cy="14" rx="16" ry="12" fill="white"/><ellipse cx="32" cy="20" rx="20" ry="8" fill="white"/></svg>
+      <svg class="mario-element mario-cloud" style="top:15%;opacity:0.06 !important;position:absolute;animation-delay:12s;" width="48" height="22" viewBox="0 0 48 22" aria-hidden="true"><ellipse cx="16" cy="14" rx="14" ry="8" fill="white"/><ellipse cx="30" cy="10" rx="12" ry="10" fill="white"/><ellipse cx="24" cy="16" rx="16" ry="6" fill="white"/></svg>
+      <!-- Coins -->
+      <svg class="mario-element mario-coin" style="top:25%;left:8%;opacity:0.12 !important;position:absolute;" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="10" rx="7" ry="9" fill="#F8D830" stroke="#C88000" stroke-width="1"/></svg>
+      <svg class="mario-element mario-coin" style="top:40%;right:10%;opacity:0.1 !important;position:absolute;animation-delay:0.5s;" width="16" height="20" viewBox="0 0 16 20" aria-hidden="true"><ellipse cx="8" cy="10" rx="7" ry="9" fill="#F8D830" stroke="#C88000" stroke-width="1"/></svg>
+      <!-- Pipe -->
+      <svg class="mario-element" style="bottom:0;left:3%;opacity:0.1 !important;position:absolute;" width="40" height="50" viewBox="0 0 40 50" aria-hidden="true"><rect x="0" y="0" width="40" height="12" rx="2" fill="#00A800" stroke="#006400" stroke-width="1"/><rect x="4" y="12" width="32" height="38" fill="#00A800" stroke="#006400" stroke-width="1"/></svg>
+      <svg class="mario-element" style="bottom:0;right:3%;opacity:0.1 !important;position:absolute;" width="40" height="50" viewBox="0 0 40 50" aria-hidden="true"><rect x="0" y="0" width="40" height="12" rx="2" fill="#00A800" stroke="#006400" stroke-width="1"/><rect x="4" y="12" width="32" height="38" fill="#00A800" stroke="#006400" stroke-width="1"/></svg>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
         <h2 class="section-title reveal">Certifications &amp; Training</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Industry certifications and hands-on training platforms.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -795,8 +968,18 @@
     </section>
 
     <!-- Leadership -->
-    <section id="leadership" class="py-24 bg-[#0a0f1a] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="leadership" class="py-24 bg-[#0a0f1a] relative z-10 overflow-hidden">
+      <!-- Dark Souls decorative elements -->
+      <div class="ds-element ds-fog" aria-hidden="true"></div>
+      <div class="ds-area-cleared ds-element" style="font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:0.3em;" aria-hidden="true">AREA CLEARED</div>
+      <!-- Bonfire -->
+      <svg class="ds-element" style="top:50%;left:50%;transform:translate(-50%,-50%);width:50px;height:70px;opacity:0.15 !important;position:absolute;" aria-hidden="true" viewBox="0 0 60 80"><line x1="30" y1="78" x2="30" y2="30" stroke="#888" stroke-width="3"/><polygon points="30,28 24,38 36,38" fill="#888"/><line x1="20" y1="48" x2="40" y2="48" stroke="#888" stroke-width="2"/><ellipse class="ds-bonfire-flame" cx="30" cy="28" rx="14" ry="20" fill="#FF6A00" opacity="0.7"/><ellipse class="ds-bonfire-flame" cx="30" cy="24" rx="9" ry="15" fill="#FFD700" opacity="0.5" style="animation-delay:0.3s"/></svg>
+      <!-- Ember particles -->
+      <div class="ds-element ds-ember" style="bottom:40%;left:48%;animation-delay:0s;" aria-hidden="true"></div>
+      <div class="ds-element ds-ember" style="bottom:40%;left:52%;animation-delay:1s;" aria-hidden="true"></div>
+      <div class="ds-element ds-ember" style="bottom:40%;left:50%;animation-delay:2s;" aria-hidden="true"></div>
+      <div class="ds-element ds-ember" style="bottom:40%;left:46%;animation-delay:3s;" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
         <h2 class="section-title reveal">Leadership</h2>
         <p class="text-[#94a3b8] mb-12 max-w-xl reveal">Building communities and competing in security challenges.</p>
         <div class="grid md:grid-cols-2 gap-6">
@@ -819,8 +1002,10 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="py-24 bg-[#111827] relative z-10">
-      <div class="max-w-6xl mx-auto px-6">
+    <section id="contact" class="py-24 bg-[#111827] relative z-10 overflow-hidden">
+      <!-- Undertale save star -->
+      <svg class="ut-element" style="top:4rem;right:15%;opacity:0.5 !important;position:absolute;animation:shieldPulse 2s ease infinite;" width="24" height="24" viewBox="0 0 20 20" aria-hidden="true"><polygon points="10,0 12.5,7.5 20,7.5 14,12.5 16,20 10,15 4,20 6,12.5 0,7.5 7.5,7.5" fill="#FFFF00"/></svg>
+      <div class="max-w-6xl mx-auto px-6 relative z-10">
         <h2 class="section-title justify-center reveal">Get In Touch</h2>
         <div class="max-w-2xl mx-auto">
           <!-- Terminal-style contact prompt -->
@@ -851,15 +1036,23 @@
             <a href="mailto:solimansultan59@gmail.com" class="btn-primary"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg> Email Me</a>
             <a href="mailto:solimansultan59@gmail.com?subject=Resume%20Request" class="btn-secondary"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> Request Resume</a>
           </div>
+          <!-- Undertale determination text -->
+          <p class="ut-determination-text text-center mt-8 font-mono text-sm text-[#94a3b8] reveal" style="opacity:0;transition:opacity 0.8s ease;">
+            <svg class="ut-soul inline-block mr-1 align-middle" width="14" height="14" viewBox="0 0 16 16"><path d="M8 14L2 8V5C2 3 3.5 1.5 5.5 1.5C6.5 1.5 7.5 2 8 3C8.5 2 9.5 1.5 10.5 1.5C12.5 1.5 14 3 14 5V8L8 14Z" fill="#FF0000"/></svg>
+            * Filled with <span class="ut-determination">DETERMINATION</span>.
+          </p>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="py-8 bg-[#0a0f1a] border-t border-[#1e293b] relative z-10">
-    <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-between items-center gap-4">
-      <p class="text-[#94a3b8] text-sm">&copy; <span id="footer-year"></span> Soliman Alktaifan. All rights reserved.</p>
-      <p class="text-[#94a3b8] text-sm">Last updated: <span id="last-updated"></span></p>
+  <footer id="site-footer" class="py-8 bg-[#0a0f1a] border-t border-[#1e293b] relative z-10 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 relative z-10">
+      <p class="arcade-blink text-center mb-4" style="opacity:0;transition:opacity 0.8s ease;" aria-hidden="true">INSERT COIN TO CONTINUE</p>
+      <div class="flex flex-wrap justify-between items-center gap-4">
+        <p class="text-[#94a3b8] text-sm">&copy; <span id="footer-year"></span> Soliman Alktaifan. All rights reserved.</p>
+        <p class="text-[#94a3b8] text-sm">Last updated: <span id="last-updated"></span></p>
+      </div>
     </div>
   </footer>
 
@@ -992,6 +1185,58 @@
         });
       }, { threshold: 0.2 });
       pokeObserver.observe(bestSkill);
+    }
+
+    // Game theme observers — toggle classes on scroll for each themed section
+    const themeMap = {
+      'about': 'mc-active',
+      'projects': 'pac-active',
+      'experience': 'zelda-active',
+      'skills': 'tetris-active',
+      'certifications': 'mario-active',
+      'leadership': 'ds-active',
+      'contact': 'ut-active'
+    };
+    const themeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = entry.target.getAttribute('id');
+        const cls = themeMap[id];
+        if (!cls) return;
+        if (entry.isIntersecting) {
+          entry.target.classList.add(cls);
+        } else {
+          entry.target.classList.remove(cls);
+        }
+      });
+    }, { threshold: 0.15 });
+    Object.keys(themeMap).forEach(id => {
+      const el = document.getElementById(id);
+      if (el) themeObserver.observe(el);
+    });
+
+    // Footer arcade theme
+    const footer = document.getElementById('site-footer');
+    if (footer) {
+      const footerObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          footer.classList.toggle('arcade-active', entry.isIntersecting);
+          const blink = footer.querySelector('.arcade-blink');
+          if (blink) blink.style.opacity = entry.isIntersecting ? '1' : '0';
+        });
+      }, { threshold: 0.3 });
+      footerObs.observe(footer);
+    }
+
+    // Show Undertale determination text when contact is active
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      const utObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const det = contactSection.querySelector('.ut-determination-text');
+          if (det) det.style.opacity = entry.isIntersecting ? '1' : '0';
+        });
+      }, { threshold: 0.3 });
+      utObs.observe(contactSection);
     }
 
     // Typed terminal — cybersecurity themed
