@@ -304,11 +304,11 @@
 
     /* Pokeball throw-in animation */
     @keyframes pokeThrow {
-      0% { transform: translate(-50%, -300%) rotate(0deg) scale(0.3); opacity: 0; }
-      30% { opacity: 1; }
-      60% { transform: translate(-50%, -50%) rotate(720deg) scale(1.1); }
-      75% { transform: translate(-50%, -50%) rotate(720deg) scale(0.95); }
-      85% { transform: translate(-50%, -50%) rotate(720deg) scale(1.05); }
+      0% { transform: translate(-400%, -50%) rotate(0deg) scale(0.3); opacity: 0; }
+      20% { opacity: 1; }
+      50% { transform: translate(-50%, -80%) rotate(540deg) scale(1.1); }
+      70% { transform: translate(-50%, -50%) rotate(720deg) scale(1.05); }
+      85% { transform: translate(-50%, -50%) rotate(720deg) scale(0.95); }
       100% { transform: translate(-50%, -50%) rotate(720deg) scale(1); }
     }
     @keyframes pokeShake {
@@ -363,7 +363,7 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -300%) scale(0.3);
+      transform: translate(-400%, -50%) scale(0.3);
       opacity: 0;
       z-index: 5;
       pointer-events: none;
